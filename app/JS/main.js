@@ -1,22 +1,18 @@
 import "../css/style.css";
 import { products } from "./products.js";
+import { DOMSelectors } from "./dom.js";
 
-document.querySelector("#app").innerHTML = `
+products.forEach((product) =>
+  insertAdjacentHTML(` 
   <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
+    <h1>Wendy's Menu</h1>
+    <div class="container">
+      <div class="card">
+        <h2 class="card-header">${products.name}</h2>
+        <img class="card-image" src="${products.image}" alt="${products.alt}/>
+        <h3 class="card-price">${products.price}</h3>
+      </div>
     </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
   </div>
-`;
-
-setupCounter(document.querySelector("#counter"));
+`)
+);

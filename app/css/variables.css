@@ -1,0 +1,26 @@
+:root {
+    /* Set up light mode, dark mode */
+    --black: #161616;
+    --dark-gray: #393939;
+    --light-gray: #c3c3c3;
+    --white: #ffffff;
+
+    /* Wendy's colors */
+    --red: #ce0f0f;
+    --blue: #146fef;
+}
+
+/* Light mode by default */
+--primary: var(--white);
+--secondary: var(--light-gray);
+
+/* Set up themes */
+.light-mode {
+    --primary: var(--white);
+    --secondary: var(--light-gray);
+}
+
+.dark-mode {
+    --primary: var(--black);
+    --secondary: var(--dark-gray)
+}
