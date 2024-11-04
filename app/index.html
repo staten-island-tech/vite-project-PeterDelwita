@@ -2,12 +2,22 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Wendy's Menu</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <div class="options-container">
+        <button data-action="theme">Change Theme</button>
+        <button class="filter" data-action="burger">Show Burgers</button>
+        <button class="filter" data-action="salad">Show Salads</button>
+        <button class="filter" data-acition="side">Show Sides</button>
+        <button class="filter" data-action="drink">Show Drinks</button>
+        <button class="filter" data-action="reset">Reset Filter</button>
+      </div>
+      <div class="container"></div>
+    </div>
     <script type="module" src="JS/main.js"></script>
   </body>
 </html>
