@@ -1,26 +1,54 @@
 :root {
-    /* Set up light mode, dark mode */
-    --black: #161616;
-    --dark-gray: #393939;
-    --light-gray: #c3c3c3;
-    --white: #ffffff;
+  /* Set up light mode, dark mode */
+  --black: #161616;
+  --dark-gray: #393939;
+  --light-gray: #c3c3c3;
+  --white: #ffffff;
 
-    /* Wendy's colors */
-    --red: #ce0f0f;
-    --blue: #146fef;
+  /* Wendy's colors */
+  --red: #ce0f0f;
+  --bright-red: #ff0000;
+  --blue: #146fef;
+  --bright-blue: #00ccff;
+
+  /* Light mode by default */
+  --primary: var(--white);
+  --secondary: var(--light-gray);
+  --primary-text-color: var(--red);
+  --secondary-text-color: var(--blue);
 }
-
-/* Light mode by default */
---primary: var(--white);
---secondary: var(--light-gray);
 
 /* Set up themes */
 .light-mode {
-    --primary: var(--white);
-    --secondary: var(--light-gray);
+  --primary: var(--white);
+  --secondary: var(--light-gray);
+  --primary-text-color: var(--red);
+  --secondary-text-color: var(--blue);
 }
 
 .dark-mode {
-    --primary: var(--black);
-    --secondary: var(--dark-gray)
+  --primary: var(--black);
+  --secondary: var(--dark-gray);
+  --primary-text-color: var(--bright-red);
+  --secondary-text-color: var(--bright-blue);
+}
+
+h1,
+.options-container {
+  background-color: var(--primary);
+}
+
+.container {
+  background-color: var(--secondary);
+}
+
+.card {
+  background-color: var(--primary);
+  border-color: var(--primary-text-color);
+}
+
+h1,
+.card-header,
+.card-price {
+  color: var(--secondary-text-color);
 }

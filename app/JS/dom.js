@@ -1,11 +1,10 @@
-import "../css/style.css";
-import "../css/variables.css";
-
 const DOMSelectors = {
-  items: document.querySelector("item"),
-  buttons: document.querySelector(".btn"),
+  button: document.querySelector(".btn"),
   container: document.querySelector(".container"),
   card: document.querySelector(".card"),
+  cardheader: document.querySelector(".card-header"),
+  cardimage: document.querySelector(".card-image"),
+  cardprice: document.querySelector(".card-price"),
 };
 
 export { DOMSelectors };

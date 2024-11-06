@@ -6,15 +6,20 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>Wendy's Menu</title>
   </head>
-  <body>
+  <body class="light-mode">
     <div id="app">
+      <h1>Wendy's Menu</h1>
       <div class="options-container">
-        <button data-action="theme">Change Theme</button>
-        <button class="filter" data-action="burger">Show Burgers</button>
-        <button class="filter" data-action="salad">Show Salads</button>
-        <button class="filter" data-acition="side">Show Sides</button>
-        <button class="filter" data-action="drink">Show Drinks</button>
-        <button class="filter" data-action="reset">Reset Filter</button>
+        <button class="btn" data-action="theme">Change Theme</button>
+        <button class="btn" id="burger" data-action="filter">
+          Show Burgers
+        </button>
+        <button class="btn" id="salad" data-action="filter">Show Salads</button>
+        <button class="btn" id="side" data-action="filter">Show Sides</button>
+        <button class="btn" id="drink" data-action="filter">Show Drinks</button>
+        <button class="btn" id="reset" data-action="filter">
+          Reset Filter
+        </button>
       </div>
       <div class="container"></div>
     </div>
