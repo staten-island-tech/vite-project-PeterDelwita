@@ -32,13 +32,14 @@ function changeTheme() {
 function filterBurgers() {
   // This function should filter all burgers and make sure they are the only cards on the screen when you click the button
   products
-    .filter((product) => product.category !== "burger") // What should it do to non-burgers after I filter?
-    .forEach((product) => remove(product)); // Supposed to remove the non-burgers while this is active. (Should be reversible) (Needs fixing)
+    .filter((product) => product.category !== "burger") // No doubts about this line
+    // Supposed to keep each burger card on the screen while the non-burgers are removed.
+    .forEach((product) => product.remove()); // Supposed to remove non-burgers;
 }
 
 DOMSelectors.button.addEventListener("click", function () {
   changeTheme();
-  if (document.button.id("burger")) {
+  if (document.button.textContent === "burger") {
     // Supposed to select the button with id "burger"
     // If button id = burger, call filterBurgers()
     filterBurgers();
