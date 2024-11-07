@@ -6,13 +6,13 @@ import { DOMSelectors } from "./dom.js";
 function createProducts() {
   products.forEach((product) =>
     DOMSelectors.container.insertAdjacentHTML(
+      // Really should be a variable
       "beforeend",
       `<div class="card">
-        <h2 class="card-header">${product.name}</h2>
-        <img class="card-image" src="${product.image}" alt="${product.alt}"/>
-        <h3 class="card-price">Price: ${product.price}</h3>
-      </div>
-  `
+      <h2 class="card-header">${product.name}</h2>
+      <img class="card-image" src="${product.image}" alt="${product.alt}"/>
+      <h3 class="card-price">Price: ${product.price}</h3>
+    </div>`
     )
   );
 }
@@ -29,17 +29,18 @@ function changeTheme() {
   }
 }
 
+// Use sort, includes, or sum
 function filterBurgers() {
   // This function should filter all burgers and make sure they are the only cards on the screen when you click the button
-  products
-    .filter((product) => product.category !== "burger") // No doubts about this line
-    // Supposed to keep each burger card on the screen while the non-burgers are removed.
-    .forEach((product) => product.remove()); // Supposed to remove non-burgers;
+  DOMSelectors.container.innerHTML = "";
+  products.filter((product) => product.category.includes("burger"));
+  createProducts();
 }
 
 DOMSelectors.button.addEventListener("click", function () {
   changeTheme();
-  if (document.button.textContent === "burger") {
+  if (document.button.textContent === "Show Burgers") {
+    // Something is wrong here
     // Supposed to select the button with id "burger"
     // If button id = burger, call filterBurgers()
     filterBurgers();
