@@ -18,6 +18,7 @@ function createProducts() {
 }
 createProducts();
 
+// Functions for buttons
 function changeTheme() {
   // Should change light mode to dark mode, and dark mode to light mode with the click of a button
   if (document.body.classList.contains("light-mode")) {
@@ -34,15 +35,12 @@ function filterBurgers() {
   // This function should filter all burgers and make sure they are the only cards on the screen when you click the button
   DOMSelectors.container.innerHTML = "";
   products.filter((product) => product.category.includes("burger"));
-  createProducts();
 }
 
-DOMSelectors.button.addEventListener("click", function () {
+DOMSelectors.themeButton.addEventListener("click", function () {
   changeTheme();
-  if (document.button.textContent === "Show Burgers") {
-    // Something is wrong here
-    // Supposed to select the button with id "burger"
-    // If button id = burger, call filterBurgers()
-    filterBurgers();
-  }
+});
+
+DOMSelectors.burgerButton.addEventListener("click", function () {
+  filterBurgers();
 });
