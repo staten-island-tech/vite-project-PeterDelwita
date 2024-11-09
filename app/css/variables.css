@@ -33,6 +33,7 @@
   --secondary-text-color: var(--bright-blue);
 }
 
+body,
 h1,
 .options-container {
   background-color: var(--primary);
@@ -49,6 +50,12 @@ h1,
 
 button {
   border-color: var(--secondary-text-color);
+  background-color: var(--primary);
+  color: var(--secondary-text-color);
+}
+
+button:hover {
+  background-color: var(--secondary);
 }
 
 h1,
